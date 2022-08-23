@@ -1,13 +1,13 @@
 import Head from "next/head";
-import Nav from "../components/layout/nav";
+import Layout from "../components/layout/layout";
 
 export default function Contact() {
   return (
-    <Nav>
+    <Layout>
       <Head />
         <div className="container">
           <h1>Contact page</h1>
         </div>
-    </Nav>
+    </Layout>
  );
 }
