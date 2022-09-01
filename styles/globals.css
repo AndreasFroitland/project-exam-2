@@ -34,3 +34,32 @@ nav a:visited {
 .container h1 {
   margin: auto;
 }
+
+form {
+  max-width: 500px;
+  margin: auto;
+}
+
+input {
+  margin: 1rem auto;
+  width: 100%;
+}
+
+select {
+  margin: 1rem auto;
+  width: 100%;
+}
+
+textarea {
+  margin: 1rem auto;
+  width: 100%;
+}
+
+button {
+  display: block;
+  margin-top: 1rem;
+}
+
+fieldset {
+  border: none;
+}
