@@ -2,7 +2,7 @@ import { useContext } from "react";
 import axios from "axios";
 import AuthContext from "../context/AuthContext";
 
-const url = "https://wordpress.froitlandswebtech.site/jwt-auth/v1/token";
+const url = "https://wordpress.froitlandswebtech.site/wp-json/";
 
 export default function useAxios() {
 	const [auth] = useContext(AuthContext);

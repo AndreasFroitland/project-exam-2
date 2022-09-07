@@ -47,6 +47,7 @@ export default function AddPost() {
 	return (
 		<DashboardPage>
 			<Heading content="Add post" />
+			<p>hello</p>
 			<form onSubmit={handleSubmit(onSubmit)}>
 				{serverError && <FormError>{serverError}</FormError>}
 				<fieldset disabled={submitting}>
