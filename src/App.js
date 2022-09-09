@@ -11,6 +11,7 @@ import HotelsPage from "./components/dashboard/hotels/HotelsPage";
 import AddHotels from "./components/dashboard/hotels/AddHotels";
 import ContactPage from "./components/contact/ContactPage";
 import HotelsListPage from "./components/hotels/HotelsListPage";
+import HotelsListDetails from "./components/hotels/HotelsDetails";
 
 function App() {
 	return (
@@ -25,6 +26,8 @@ function App() {
                         <Route path='/' element={<HomePage/>} />
 
 						<Route path='/hotels' element={<HotelsListPage/>} />
+
+						<Route path="/hotels/details/:id" element={<HotelsListDetails />} />
 
 			            <Route path='/contact' element={<ContactPage/>} />
 

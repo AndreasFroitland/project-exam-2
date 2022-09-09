@@ -2,6 +2,7 @@ import {Link} from "react-router-dom";
 import styled from "styled-components";
 import HolidazeTexture from "../images/Holidaze-texture.png";
 
+/* Navigation container */
 export const ContainerNav = styled.div`
     width: 100%;
     margin: 0 auto;
@@ -9,6 +10,7 @@ export const ContainerNav = styled.div`
     background-image: url(${HolidazeTexture});
 `;
 
+/* Holidaze logo */
 export const ContainerLogo = styled.div`
     display: inline-block;
     vertical-align:middle
@@ -20,37 +22,37 @@ export const NavbarLogo = styled.img`
     margin-right: 2rem;
 `;
 
+/* Navbar link container */
 export const ContainerNavbar  = styled.div`
     max-width: 1000px;
     margin: 0 auto;
-    padding: 1.5rem 0rem 1.5rem 0.5rem;
+    padding: 2rem 0rem 2rem 0rem;
 `;
 
 export const ContainerLink = styled.div `
     display: inline-block;
-    padding: 0.25rem 1.25rem 0.25rem 1.25rem;
+    padding: 0rem 2.5rem 0rem 2.5rem;
     margin-right: 2rem;
 
-    border-style: solid;
-    border-radius: .25rem;
-    border-width: 0.15rem;
-    border-color: black;
+    border: 2px solid #000;
+    background-color: rgba(186, 183, 108, 0.25);
 
-    background-color: rgba(215, 214, 170, 0.65);
-    color: #E6E5CA;
-
-    &:hover {
-        background-color: #E6E5CA;
+    &:hover{
+        background-color: rgba(230, 229, 202, 0.25);
     }
 `;
 
 export const NavbarLink = styled(Link) `
-    color: black;
+    color: #000;
+    text-align: center;
+    line-height: 40px;
     font-size: 1rem;
-    font-family: Open sans;
+    font-family: sans-serif;
+    font-weight: 100;
     text-decoration: none;
+    letter-spacing: 0.15rem;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 700;
 
     &:hover{
         color: #2F2F16;
@@ -59,29 +61,28 @@ export const NavbarLink = styled(Link) `
 
 export const ContainerButton = styled.div `
     display: inline-block;
-    padding: 0.25rem 1.25rem 0.25rem 1.25rem;
+    padding: 0rem 2.5rem 0rem 2.5rem;
     margin-right: 2rem;
 
-    border-style: solid;
-    border-radius: .25rem;
-    border-width: 0.15rem;
+    border: 2px solid #000;
+    background-color: rgba(186, 183, 108, 0.25);
 
-    background-color: #BAB86C;
-    color: #E6E5CA;
-
-    &:hover {
-        background-color: #E6E5CA;
+    &:hover{
+        background-color: rgba(230, 229, 202, 0.25);
     }
 `;
 
 export const NavbarButton = styled.button `
-    color: black;
+    color: #000;
+    text-align: center;
+    line-height: 40px;
     font-size: 1rem;
-    font-family: Open sans;
-    font-style: italic;
+    font-family: sans-serif;
+    font-weight: 100;
     text-decoration: none;
+    letter-spacing: 0.15rem;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 700;
     border: none;
     background-color: transparent;
 

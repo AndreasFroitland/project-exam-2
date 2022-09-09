@@ -1,10 +1,11 @@
 import Heading from "../layout/Heading";
+import HotelsList from "./HotelsList";
 
-export default function HotelsListPage() {
+export default function HotelsPage() {
 	return (
 		<>
-			<Heading content="Hotels" />
-			<div className="container"></div>
+		    <Heading content="Hotels" />
+			<HotelsList />
 		</>
 	);
 }
