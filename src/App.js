@@ -1,4 +1,5 @@
 import React from "react";
+import Container from "./components/layout/Container";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./components/home/HomePage";
 import LoginPage from "./components/login/LoginPage";
@@ -9,16 +10,21 @@ import "./App.css";
 import HotelsPage from "./components/dashboard/hotels/HotelsPage";
 import AddHotels from "./components/dashboard/hotels/AddHotels";
 import ContactPage from "./components/contact/ContactPage";
+import HotelsListPage from "./components/hotels/HotelsListPage";
 
 function App() {
 	return (
-		<AuthProvider>
-			<Router>
-				<Nav />
-				<div className="container">
+		
+		<Container>
+		    <AuthProvider>
+			    <Router>
+				    <Nav />
+				        <div className="container">
 					<Routes>
-            
+
                         <Route path='/' element={<HomePage/>} />
+
+						<Route path='/hotels' element={<HotelsListPage/>} />
 
 			            <Route path='/contact' element={<ContactPage/>} />
 
@@ -31,9 +37,11 @@ function App() {
                         <Route path='/dashboard/hotels/add' element={<AddHotels/>} />
 
 					</Routes>
-				</div>
-			</Router>
-		</AuthProvider>
+				        </div>
+			    </Router>
+		    </AuthProvider>
+		</Container>
+	
 	);
 }
 
