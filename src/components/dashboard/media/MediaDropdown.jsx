@@ -4,7 +4,6 @@ import useAxios from "../../../hooks/useAxios";
 
 export default function MediaDropdown({ register }) {
 	const [media, setMedia] = useState([]);
-
 	const http = useAxios();
 
 	useEffect(function () {
@@ -23,8 +22,8 @@ export default function MediaDropdown({ register }) {
 	}, []);
 
 	return (
-		<select name="featured_media" ref={register}>
-			<option value="">Select media</option>
+		<select name="featured_media" {...register("featured_media")}>
+			<option value="">Featured image</option>
 			{media.map((media) => {
 				return (
 					<option key={media.id} value={media.id}>

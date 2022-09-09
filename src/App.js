@@ -6,8 +6,9 @@ import DashboardPage from "./components/dashboard/DashboardPage";
 import Nav from "./components/layout/Nav";
 import { AuthProvider } from "./context/AuthContext";
 import "./App.css";
-import PostPage from "./components/dashboard/posts/PostPage";
-import AddPost from "./components/dashboard/posts/AddPost";
+import HotelsPage from "./components/dashboard/hotels/HotelsPage";
+import AddHotels from "./components/dashboard/hotels/AddHotels";
+import ContactPage from "./components/contact/ContactPage";
 
 function App() {
 	return (
@@ -17,15 +18,17 @@ function App() {
 				<div className="container">
 					<Routes>
             
-            <Route path='/' element={<HomePage/>} />
+                        <Route path='/' element={<HomePage/>} />
 
-            <Route path='/login' element={<LoginPage/>} />
+			            <Route path='/contact' element={<ContactPage/>} />
 
-            <Route path='/dashboard' element={<DashboardPage/>} />
+                        <Route path='/login' element={<LoginPage/>} />
 
-            <Route path='/dashboard/posts' element={<PostPage/>} />
+                        <Route path='/dashboard' element={<DashboardPage/>} />
 
-            <Route path='/dashboard/posts/add' element={<AddPost/>} />
+                        <Route path='/dashboard/hotels' element={<HotelsPage/>} />
+
+                        <Route path='/dashboard/hotels/add' element={<AddHotels/>} />
 
 					</Routes>
 				</div>

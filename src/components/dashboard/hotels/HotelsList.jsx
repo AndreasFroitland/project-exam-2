@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import useAxios from "../../../hooks/useAxios";
 
-export default function PostList() {
-	const [posts, setPosts] = useState([]);
+export default function HotelsList() {
+	const [hotels, setHotels] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
 
@@ -12,9 +11,9 @@ export default function PostList() {
 	useEffect(function () {
 		async function getMedia() {
 			try {
-				const response = await http.get("wp/v2/posts");
+				const response = await http.get("wp/v2/product");
 				console.log("response", response);
-				setPosts(response.data);
+				setHotels(response.data);
 			} catch (error) {
 				console.log(error);
 				setError(error.toString());
@@ -27,16 +26,16 @@ export default function PostList() {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
-	if (loading) return <div>Loading posts...</div>;
+	if (loading) return <div>Loading hotels...</div>;
 
 	if (error) return <div>{}</div>;
 
 	return (
-		<ul className="posts">
-			{posts.map((media) => {
+		<ul className="product__list">
+			{hotels.map((media) => {
 				return (
 					<li key={media.id}>
-						<Link to={`/dashboard/posts/edit/${media.id}`}>{media.title.rendered}</Link>
+						{media.title.rendered}
 					</li>
 				);
 			})}

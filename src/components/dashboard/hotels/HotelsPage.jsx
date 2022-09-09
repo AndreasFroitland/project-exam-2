@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
 import Heading from "../../layout/Heading";
 import DashboardPage from "../DashboardPage";
-import PostList from "./PostList";
+import HotelsList from "./HotelsList";
 
-export default function PostPage() {
+export default function HotelsPage() {
 	return (
 		<DashboardPage>
-			<Heading size="3" content="Posts" />
+			<Heading size="3" content="Hotels" />
 			<p>
-				<Link to="/dashboard/posts/add">Add post</Link>
+				<Link to="/dashboard/hotels/add">Add hotel</Link>
 			</p>
-			<PostList />
+			<HotelsList />
 		</DashboardPage>
 	);
 }
