@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BASE_URL } from "../../constants/api";
+import { ContainerHotels, StyleHotelsLeft, StyleHotelsRight } from "../layout/StyleHotels";
 
 export default function HotelsList() {
     const [hotels, setHotels] = useState([]);
@@ -32,11 +33,17 @@ export default function HotelsList() {
         <div className="hotels">
             {hotels.map((hotel) => {
                 return (
-                    <div key={hotel.id}>
-                    <Link to={`details/${hotel.id}`} key={hotel.id}>
-                        <p>{hotel.title.rendered}</p>
-                    </Link>
-                    </div>
+                    <ContainerHotels key={hotel.id}>
+                        <StyleHotelsLeft>
+                          <h1>{hotel.title.rendered}</h1>
+                            <Link to={`details/${hotel.id}`} key={hotel.id}>
+                                <p>Read more</p>
+                            </Link>
+                        </StyleHotelsLeft>
+                        <StyleHotelsRight>
+                            <img src={hotel.better_featured_image.source_url} alt={hotel.title.rendered}/>
+                        </StyleHotelsRight>
+                    </ContainerHotels>
                 );
 			})}
         </div>

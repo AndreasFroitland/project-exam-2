@@ -1,11 +1,17 @@
 import Heading from "../layout/Heading";
 import LoginForm from "./LoginForm";
+import { ContainerPage } from "../layout/Container";
+import { ContainerHeader } from "../layout/StyleForm";
 
 export default function LoginPage() {
 	return (
 		<>
-			<Heading content="Login" />
+		  <ContainerPage>
+			<ContainerHeader>
+			  <Heading content="Login" />
+			</ContainerHeader>
 			<LoginForm />
+		  </ContainerPage>
 		</>
 	);
 }

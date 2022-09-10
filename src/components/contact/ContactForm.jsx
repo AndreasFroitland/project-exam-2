@@ -4,7 +4,9 @@ import { useNavigate } from "react-router-dom";
 import {yupResolver} from "@hookform/resolvers/yup";
 import FormError from "../common/FormError";
 import * as yup from "yup";
-import useAxios from "../../hooks/useAxios";
+import { BASE_URL } from "../../constants/api";
+import axios from "axios";
+import { ContainerForm, StyleForm, StyleFieldset, StyleInput, StyleTextarea, StyleButton } from "../layout/StyleForm";
 
 const schema = yup.object().shape({
     fullname: yup.string().required().min(3),
@@ -17,7 +19,7 @@ export default function AddContact() {
 	const [serverError, setServerError] = useState(null);
 
     const navigate = useNavigate();
-    const http = useAxios();
+    const url = BASE_URL + "wp/v2/messages";
 
     const { register, handleSubmit, formState: { errors } } = useForm({
 		resolver: yupResolver(schema),
@@ -37,7 +39,7 @@ export default function AddContact() {
         console.log(contact)
 
         try {
-			const response = await http.post("wp/v2/messages", contact);
+			const response = await axios.post(url, contact);
 			console.log("response:", response.data);
 			navigate("/");
 		} catch (error) {
@@ -49,25 +51,27 @@ export default function AddContact() {
 	}
 
     return (
-			<form onSubmit={handleSubmit(onSubmit)}>
+        <ContainerForm>
+			<StyleForm onSubmit={handleSubmit(onSubmit)}>
 				{serverError && <FormError>{serverError}</FormError>}
-				<fieldset disabled={submitting}>
+				<StyleFieldset disabled={submitting}>
 					<div>
-                        <input {...register("fullname")} placeholder="Name"/>
+                        <StyleInput {...register("fullname")} placeholder="Name"/>
 						{errors.fullname && <FormError>{errors.fullname?.message}</FormError>}
 					</div>
 
                     <div>
-                        <input {...register("email")} placeholder="E-mail"/>
+                        <StyleInput {...register("email")} placeholder="E-mail"/>
 						{errors.email && <FormError>{errors.email?.message}</FormError>}
 					</div>
 
                     <div>
-                        <textarea {...register("message")} placeholder="Message"/>
+                        <StyleTextarea {...register("message")} placeholder="Message"/>
 						{errors.message && <FormError>{errors.message?.message}</FormError>}
 					</div>
-					<button>{submitting ? "Submitting..." : "Submit"}</button>
-				</fieldset>
-			</form>
+					<StyleButton>{submitting ? "Submitting..." : "Submit"}</StyleButton>
+				</StyleFieldset>
+			</StyleForm>
+        </ContainerForm>
 	);
 }

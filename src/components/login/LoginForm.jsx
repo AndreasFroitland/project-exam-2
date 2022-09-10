@@ -7,6 +7,7 @@ import axios from "axios";
 import FormError from "../common/FormError";
 import { BASE_URL, TOKEN_PATH } from "../../constants/api";
 import AuthContext from "../../context/AuthContext";
+import { ContainerForm, StyleForm, StyleFieldset, StyleInput, StyleButton } from "../layout/StyleForm";
 
 const url = BASE_URL + TOKEN_PATH;
 
@@ -46,20 +47,23 @@ export default function LoginForm() {
 
 	return (
         <>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            {loginError && <FormError>{loginError}</FormError>}
-              <fieldset disabled={submitting}>
+		  <ContainerForm>
+            <StyleForm onSubmit={handleSubmit(onSubmit)}>
+              {loginError && <FormError>{loginError}</FormError>}
+              <StyleFieldset disabled={submitting}>
                 <div>
-                  <input placeholder="Username" {...register("username", { required: true })} />
+                  <StyleInput placeholder="Username" {...register("username", { required: true })} />
                   {errors?.username && <FormError>{errors.username.message}</FormError>}
                 </div>
+
                 <div>
-                  <input placeholder="Password" {...register("password", { required: true })} type="password" />
+                  <StyleInput placeholder="Password" {...register("password", { required: true })} type="password" />
                   {errors?.password && <FormError>{errors.password.message}</FormError>}
                 </div>
-                  <button>{submitting ? "Loggin in..." : "Login"}</button>
-              </fieldset>
-          </form>
+                  <StyleButton>{submitting ? "Loggin in..." : "Login"}</StyleButton>
+              </StyleFieldset>
+            </StyleForm>
+		  </ContainerForm>
         </>
       );
   }

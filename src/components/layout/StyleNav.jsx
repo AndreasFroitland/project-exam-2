@@ -8,12 +8,13 @@ export const ContainerNav = styled.div`
     margin: 0 auto;
     background-color: #808000;
     background-image: url(${HolidazeTexture});
+    text-align: center;
 `;
 
 /* Holidaze logo */
 export const ContainerLogo = styled.div`
     display: inline-block;
-    vertical-align:middle
+    vertical-align: middle
 `;
 
 export const NavbarLogo = styled.img`
@@ -24,7 +25,7 @@ export const NavbarLogo = styled.img`
 
 /* Navbar link container */
 export const ContainerNavbar  = styled.div`
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 0rem 2rem 0rem;
 `;
@@ -48,7 +49,6 @@ export const NavbarLink = styled(Link) `
     line-height: 40px;
     font-size: 1rem;
     font-family: sans-serif;
-    font-weight: 100;
     text-decoration: none;
     letter-spacing: 0.15rem;
     text-transform: uppercase;
