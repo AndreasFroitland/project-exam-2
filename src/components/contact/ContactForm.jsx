@@ -7,7 +7,7 @@ import * as yup from "yup";
 import useAxios from "../../hooks/useAxios";
 
 const schema = yup.object().shape({
-    name: yup.string().required().min(3),
+    fullname: yup.string().required().min(3),
     email: yup.string().email().required(),
     message: yup.string().required().min(20)
 });
@@ -30,16 +30,14 @@ export default function AddContact() {
             title: data.title,
             content: data.content,
             status: "publish",
-            fields: {
-                name: data.name,
-                email: data.email,
-                message: data.message
-            }
+            fullname: data.fullname,
+            email: data.email,
+            message: data.message  
         }
         console.log(contact)
 
         try {
-			const response = await http.post("wp/v2/contact", contact);
+			const response = await http.post("wp/v2/messages", contact);
 			console.log("response:", response.data);
 			navigate("/");
 		} catch (error) {
@@ -55,8 +53,8 @@ export default function AddContact() {
 				{serverError && <FormError>{serverError}</FormError>}
 				<fieldset disabled={submitting}>
 					<div>
-                        <input {...register("name")} placeholder="Name"/>
-						{errors.name && <FormError>{errors.name?.message}</FormError>}
+                        <input {...register("fullname")} placeholder="Name"/>
+						{errors.fullname && <FormError>{errors.fullname?.message}</FormError>}
 					</div>
 
                     <div>
