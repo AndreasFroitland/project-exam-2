@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BASE_URL } from "../../constants/api";
-import { ContainerHotels, StyleHotelsLeft, StyleHotelsRight } from "../layout/StyleHotels";
+import { ContainerHotels, StyleHotels } from "../layout/StyleHotels";
 
 export default function HotelsList() {
     const [hotels, setHotels] = useState([]);
@@ -11,7 +11,7 @@ export default function HotelsList() {
     useEffect(function() {
         async function getHotels() {
             try {
-                const response = await fetch(BASE_URL + "wp/v2/product");
+                const response = await fetch(BASE_URL + "wp/v2/hotel");
                 const json = await response.json();
 
                 setHotels(json);
@@ -34,15 +34,16 @@ export default function HotelsList() {
             {hotels.map((hotel) => {
                 return (
                     <ContainerHotels key={hotel.id}>
-                        <StyleHotelsLeft>
-                          <h1>{hotel.title.rendered}</h1>
+                        <StyleHotels>
+                            <img src={hotel.hotel_featured_image.guid} alt={hotel.hotel_name}/>
+                            <h1>{hotel.hotel_name}</h1>
+                            <p>Price range from {hotel.hotel_price}$</p>
+                            <p>Hotel rating: {hotel.hotel_rating}</p>
+                            <p>Hotel reviews: {hotel.hotel_reviews}</p>
                             <Link to={`details/${hotel.id}`} key={hotel.id}>
                                 <p>Read more</p>
                             </Link>
-                        </StyleHotelsLeft>
-                        <StyleHotelsRight>
-                            <img src={hotel.better_featured_image.source_url} alt={hotel.title.rendered}/>
-                        </StyleHotelsRight>
+                        </StyleHotels>
                     </ContainerHotels>
                 );
 			})}

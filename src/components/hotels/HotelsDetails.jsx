@@ -13,7 +13,7 @@ export default function ViewPage() {
 		function () {
 			async function getPage() {
 				try {
-					const response = await fetch(BASE_URL + "wp/v2/product/" + id);
+					const response = await fetch(BASE_URL + "wp/v2/hotel/" + id);
 					const json = await response.json();
 
 				    setPage(json);
@@ -39,8 +39,8 @@ export default function ViewPage() {
 	return (
 		<>
 			<div key={page.id}>
-                <p>{page.title.rendered}</p>
-                <p>{page.content.rendered}</p>
+                <p>{page.hotel_name}</p>
+                <p>{page.hotel_description}</p>
             </div>
         </>
 	);
