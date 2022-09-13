@@ -52,12 +52,14 @@ export default function LoginForm() {
               {loginError && <FormError>{loginError}</FormError>}
               <StyleFieldset disabled={submitting}>
                 <div>
-                  <StyleInput placeholder="Username" {...register("username", { required: true })} />
+				  <p>Username:</p>
+                  <StyleInput placeholder="username..." {...register("username", { required: true })} />
                   {errors?.username && <FormError>{errors.username.message}</FormError>}
                 </div>
 
                 <div>
-                  <StyleInput placeholder="Password" {...register("password", { required: true })} type="password" />
+				  <p>Password:</p>
+                  <StyleInput placeholder="password..." {...register("password", { required: true })} type="password" />
                   {errors?.password && <FormError>{errors.password.message}</FormError>}
                 </div>
                   <StyleButton>{submitting ? "Loggin in..." : "Login"}</StyleButton>

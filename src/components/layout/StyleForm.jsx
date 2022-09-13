@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import HolidazeTexture from "../images/Holidaze-texture.png";
 
 /* Navigation container */
 export const ContainerForm = styled.div`
@@ -23,8 +22,13 @@ export const StyleForm = styled.form`
     max-width: 500px;
     margin: 0 auto;
     background-color: #808000;
-    background-image: url(${HolidazeTexture});
-    border: 2px solid #000;
+    border-radius: .5rem;
+    }
+    p {
+        font-size: 1rem;
+        font-family: sans-serif;
+        padding-left: .5rem;
+    }
 `;
 
 export const StyleInput = styled.input`
@@ -49,16 +53,18 @@ export const StyleTextarea = styled.textarea`
     resize: none;
     border-radius: .5rem;
     border: none;
+    font-family: sans-serif;
 `;
 
 export const StyleButton = styled.button`
     display: block;
-    width: 99%;
+    width: 98.5%;
     margin: 0 auto;
     margin-bottom: .5rem;
     margin-top: .7rem;
     padding: .5rem;
-    border: 2px solid #000;
+    border-radius: .5rem;
+    border-color: transparent;
     background-color: rgba(230, 229, 202, 0.25);
     
     color: #000;

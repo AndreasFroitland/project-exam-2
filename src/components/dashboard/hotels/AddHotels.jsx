@@ -6,13 +6,12 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import FormError from "../../common/FormError";
 import useAxios from "../../../hooks/useAxios";
 import Heading from "../../layout/Heading";
-import MediaDropdown from "../media/MediaDropdown";
 import DashboardPage from "../DashboardPage";
+import { ContainerForm, ContainerHeader, StyleForm, StyleInput, StyleTextarea, StyleButton, StyleFieldset } from "../../layout/StyleForm";
 
 const schema = yup.object().shape({
-	title: yup.string().required("please enter title"),
-	content: yup.string().required("please enter content"),
-	featured_media: yup.string().required("please select image")
+	hotel_name: yup.string().required("Please enter a hotel name"),
+	hotel_description: yup.string().required("Please enter a hotel description"),
 });
 
 export default function AddHotels() {
@@ -29,25 +28,19 @@ export default function AddHotels() {
 	async function onSubmit(data) {
 		setSubmitting(true);
 		setServerError(null);
-
 		
 		data.status = "publish";
-
-		if(data.featured_media === ""){
-			data.featured_media = null
-		}
 
 		console.log(data);
 
 		const addHotels = {
-			title: data.title,
-			content: data.content,
 			status: "publish",
-			featured_media: data.featured_media,
+			hotel_name: data.hotel_name,
+			hotel_description: data.hotel_description,
 		}
 
 		try {
-			const response = await http.post("wp/v2/product", addHotels);
+			const response = await http.post("wp/v2/hotel", addHotels);
 			console.log("response:", response.data);
 			navigate("/dashboard/hotels");
 		} catch (error) {
@@ -60,25 +53,28 @@ export default function AddHotels() {
 
 	return (
 		<DashboardPage>
-			<Heading content="Add hotel" />
-			<form onSubmit={handleSubmit(onSubmit)}>
+			<ContainerForm>
+				<ContainerHeader>
+			        <Heading content="Add hotel" />
+			    </ContainerHeader>
+			<StyleForm onSubmit={handleSubmit(onSubmit)}>
 				{serverError && <FormError>{serverError}</FormError>}
-				<fieldset disabled={submitting}>
+				<StyleFieldset disabled={submitting}>
 					<div>
-						<input name="title" placeholder="Title" {...register("title")} />
-						{errors.title && <FormError>{errors.title?.message}</FormError>}
+						<p>Hotel name:</p>
+						<StyleInput name="hotel_name" placeholder="hotel name..." {...register("hotel_name")} />
+						{errors.hotel_name && <FormError>{errors.hotel_name?.message}</FormError>}
 					</div>
 
 					<div>
-						<textarea name="content" placeholder="Content" {...register("content")} />
+						<p>Hotel description:</p>
+						<StyleTextarea name="hotel_description" placeholder="hotel description..." {...register("hotel_description")} />
 					</div>
 
-					<div>
-						<MediaDropdown register={register} />
-					</div>
-					<button>{submitting ? "Submitting..." : "Submit"}</button>
-				</fieldset>
-			</form>
+					<StyleButton>{submitting ? "Submitting..." : "Submit"}</StyleButton>
+				</StyleFieldset>
+			</StyleForm>
+			</ContainerForm>
 		</DashboardPage>
 	);
 }

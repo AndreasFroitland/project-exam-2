@@ -11,7 +11,7 @@ export default function HotelsList() {
 	useEffect(function () {
 		async function getMedia() {
 			try {
-				const response = await http.get("wp/v2/product");
+				const response = await http.get("wp/v2/hotel");
 				console.log("response", response);
 				setHotels(response.data);
 			} catch (error) {
@@ -35,7 +35,7 @@ export default function HotelsList() {
 			{hotels.map((media) => {
 				return (
 					<li key={media.id}>
-						{media.title.rendered}
+						{media.hotel_name}
 					</li>
 				);
 			})}

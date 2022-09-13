@@ -9,9 +9,9 @@ import axios from "axios";
 import { ContainerForm, StyleForm, StyleFieldset, StyleInput, StyleTextarea, StyleButton } from "../layout/StyleForm";
 
 const schema = yup.object().shape({
-    fullname: yup.string().required().min(3),
-    email: yup.string().email().required(),
-    message: yup.string().required().min(20)
+    fullname: yup.string().required("Please enter your name").min(5, "Name must be at least 5 letters"),
+    email: yup.string().email("E-mail must be valid").required("Please enter your email"),
+    message: yup.string().required("Please enter your message").min(20, "Message must be at least 20 letters")
 });
 
 export default function AddContact() {
@@ -56,17 +56,20 @@ export default function AddContact() {
 				{serverError && <FormError>{serverError}</FormError>}
 				<StyleFieldset disabled={submitting}>
 					<div>
-                        <StyleInput {...register("fullname")} placeholder="Name"/>
+                        <p>Name:</p>
+                        <StyleInput {...register("fullname")} placeholder="name..."/>
 						{errors.fullname && <FormError>{errors.fullname?.message}</FormError>}
 					</div>
 
                     <div>
-                        <StyleInput {...register("email")} placeholder="E-mail"/>
+                        <p>E-mail:</p>
+                        <StyleInput {...register("email")} placeholder="e-mail..."/>
 						{errors.email && <FormError>{errors.email?.message}</FormError>}
 					</div>
 
                     <div>
-                        <StyleTextarea {...register("message")} placeholder="Message"/>
+                        <p>Message:</p>
+                        <StyleTextarea {...register("message")} placeholder="message..."/>
 						{errors.message && <FormError>{errors.message?.message}</FormError>}
 					</div>
 					<StyleButton>{submitting ? "Submitting..." : "Submit"}</StyleButton>
