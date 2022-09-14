@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
 function Heading({ size = "1", content }) {
 	const VariableHeading = `h${size}`;
@@ -12,3 +13,13 @@ Heading.propTypes = {
 };
 
 export default Heading;
+
+export const StyleHeading = styled.div`
+    color: #000;
+	padding: .5rem;
+	margin: 0;
+    font-size: .8rem;
+    font-family: sans-serif;
+	letter-spacing: 0.15rem;
+    font-weight: 700;
+`;

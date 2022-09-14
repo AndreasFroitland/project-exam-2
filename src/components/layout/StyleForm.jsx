@@ -11,9 +11,12 @@ export const ContainerHeader = styled.div`
     margin: 0 auto;
     }
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-family: sans-serif;
+	    letter-spacing: 0.15rem;
+        font-weight: 700;
         margin: 0;
+        color: #000;
     }
 `;
 
@@ -25,7 +28,9 @@ export const StyleForm = styled.form`
     border-radius: .5rem;
     }
     p {
-        font-size: 1rem;
+        color: #FFF;
+        font-weight: 700;
+        font-size: .8rem;
         font-family: sans-serif;
         padding-left: .5rem;
     }
@@ -67,10 +72,10 @@ export const StyleButton = styled.button`
     border-color: transparent;
     background-color: rgba(230, 229, 202, 0.25);
     
-    color: #000;
+    color: #FFF;
     text-align: center;
     line-height: 40px;
-    font-size: 1rem;
+    font-size: .8rem;
     font-family: sans-serif;
     text-decoration: none;
     letter-spacing: 0.15rem;

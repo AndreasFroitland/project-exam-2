@@ -1,13 +1,11 @@
 import {Link} from "react-router-dom";
 import styled from "styled-components";
-import HolidazeTexture from "../images/Holidaze-texture.png";
 
 /* Navigation container */
 export const ContainerNav = styled.div`
     width: 100%;
     margin: 0 auto;
     background-color: #808000;
-    background-image: url(${HolidazeTexture});
     text-align: center;
 `;
 
@@ -25,7 +23,7 @@ export const NavbarLogo = styled.img`
 
 /* Navbar link container */
 export const ContainerNavbar  = styled.div`
-    max-width: 1200px;
+    width: 95%;
     margin: 0 auto;
     padding: 2rem 0rem 2rem 0rem;
 `;
@@ -35,7 +33,8 @@ export const ContainerLink = styled.div `
     padding: 0rem 2.5rem 0rem 2.5rem;
     margin-right: 2rem;
 
-    border: 2px solid #000;
+    border: 2px solid #FFF;
+    border-radius: 1.5rem;
     background-color: rgba(186, 183, 108, 0.25);
 
     &:hover{
@@ -44,10 +43,10 @@ export const ContainerLink = styled.div `
 `;
 
 export const NavbarLink = styled(Link) `
-    color: #000;
+    color: #FFF;
     text-align: center;
     line-height: 40px;
-    font-size: 1rem;
+    font-size: .8rem;
     font-family: sans-serif;
     text-decoration: none;
     letter-spacing: 0.15rem;
@@ -64,7 +63,8 @@ export const ContainerButton = styled.div `
     padding: 0rem 2.5rem 0rem 2.5rem;
     margin-right: 2rem;
 
-    border: 2px solid #000;
+    border: 2px solid #FFF;
+    border-radius: 1.5rem;
     background-color: rgba(186, 183, 108, 0.25);
 
     &:hover{
@@ -73,10 +73,10 @@ export const ContainerButton = styled.div `
 `;
 
 export const NavbarButton = styled.button `
-    color: #000;
+    color: #FFF;
     text-align: center;
     line-height: 40px;
-    font-size: 1rem;
+    font-size: .8rem;
     font-family: sans-serif;
     font-weight: 100;
     text-decoration: none;

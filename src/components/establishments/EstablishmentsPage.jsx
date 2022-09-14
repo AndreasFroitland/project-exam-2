@@ -1,15 +1,16 @@
 import Heading from "../layout/Heading";
 import { StyleHeading } from "../layout/Heading"
+import EstablishmentsList from "./EstablishmentsList";
 import { ContainerPage } from "../layout/Container";
 
-export default function HomePage() {
+export default function EstablishmentsPage() {
 	return (
 		<>
 		  <ContainerPage>
 			<StyleHeading>
-			    <Heading content="Home" />
+		        <Heading content="Establishments" />
 			</StyleHeading>
-			<div className="container"></div>
+			<EstablishmentsList />
 		  </ContainerPage>
 		</>
 	);

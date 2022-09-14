@@ -10,7 +10,7 @@ import { ContainerNav,
 		 ContainerLogo,
 		 NavbarLogo } from "../layout/StyleNav";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHouse, faRightToBracket, faComments, faHotel } from '@fortawesome/free-solid-svg-icons'
+import { faHouse, faRightToBracket, faComments, faHotel, faCogs } from '@fortawesome/free-solid-svg-icons'
 
 function Nav() {
 	const [auth, setAuth] = useContext(AuthContext);
@@ -28,28 +28,43 @@ function Nav() {
 				<ContainerLogo>
 					<NavbarLogo src={require('../images/Holidaze-logo.png')} alt="Holidaze logo" />
 				</ContainerLogo>
-				<ContainerLink>
-			        <NavbarLink to="/"><FontAwesomeIcon icon={faHouse} /> Home</NavbarLink>
-				</ContainerLink>
-				<ContainerLink>
-			        <NavbarLink to="/hotels"><FontAwesomeIcon icon={faHotel} /> Hotels</NavbarLink>
-				</ContainerLink>
-				<ContainerLink>
-			        <NavbarLink to="/contact"><FontAwesomeIcon icon={faComments} /> Contact</NavbarLink>
-				</ContainerLink>
+				
+			    <NavbarLink to="/">
+					<ContainerLink>
+						<FontAwesomeIcon icon={faHouse} /> Home
+					</ContainerLink>
+				</NavbarLink>
+				
+			    <NavbarLink to="/establishments">
+					<ContainerLink>
+						<FontAwesomeIcon icon={faHotel} /> Booking
+					</ContainerLink>
+				</NavbarLink>
+				
+			    <NavbarLink to="/contact">
+					<ContainerLink>
+						<FontAwesomeIcon icon={faComments} /> Contact
+					</ContainerLink>
+				</NavbarLink>
+				
 			    {auth ? (
 				    <>
-					<ContainerLink>
-					    <NavbarLink to="/dashboard">Dashboard</NavbarLink>
-					</ContainerLink>
+					<NavbarLink to="/dashboard">
+						<ContainerLink>
+							<FontAwesomeIcon icon={faCogs} /> Dashboard
+						</ContainerLink>
+					</NavbarLink>
+					
 					<ContainerButton>
 					    <NavbarButton onClick={logout}><FontAwesomeIcon icon={faRightToBracket} /> Logout</NavbarButton>
 					</ContainerButton>
 				    </>
 			    ) : (
-					<ContainerLink>
-				        <NavbarLink to="/login"><FontAwesomeIcon icon={faRightToBracket} /> Login</NavbarLink>
-					</ContainerLink>
+				    <NavbarLink to="/login">
+						<ContainerLink>
+							<FontAwesomeIcon icon={faRightToBracket} /> Login
+						</ContainerLink>
+					</NavbarLink>
 			    )}
 			</ContainerNavbar>
 		</ContainerNav>

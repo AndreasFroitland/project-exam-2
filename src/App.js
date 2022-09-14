@@ -10,8 +10,8 @@ import "./App.css";
 import HotelsPage from "./components/dashboard/hotels/HotelsPage";
 import AddHotels from "./components/dashboard/hotels/AddHotels";
 import ContactPage from "./components/contact/ContactPage";
-import HotelsListPage from "./components/hotels/HotelsListPage";
-import HotelsListDetails from "./components/hotels/HotelsDetails";
+import EstablishmentsPage from "./components/establishments/EstablishmentsPage";
+import EstablishmentsDetails from "./components/establishments/EstablishmentsDetails";
 
 function App() {
 	return (
@@ -25,9 +25,9 @@ function App() {
 
                         <Route path='/' element={<HomePage/>} />
 
-						<Route path='/hotels' element={<HotelsListPage/>} />
+						<Route path='/establishments' element={<EstablishmentsPage/>} />
 
-						<Route path="/hotels/details/:id" element={<HotelsListDetails />} />
+						<Route path="/establishments/details/:id" element={<EstablishmentsDetails />} />
 
 			            <Route path='/contact' element={<ContactPage/>} />
 
