@@ -19,6 +19,12 @@ export const NavbarLogo = styled.img`
     height: 95px;
     padding: 0.5rem 1.5rem 0.5rem 1.5rem;
     margin-right: 2rem;
+    }
+    @media (max-width: 850px) {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: .5rem;
+    }
 `;
 
 /* Navbar link container */
@@ -42,6 +48,7 @@ export const ContainerLink = styled.div `
     }
     @media (max-width: 850px) {
     display: block;
+    margin: 0 auto;
     margin-bottom: .5rem;
     }
 `;
