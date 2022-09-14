@@ -6,8 +6,10 @@ export const ContainerEstablishments = styled.div`
     max-width: 1200px;
     margin: 0 auto;
     margin-right: .5rem;
+    margin-bottom: .5rem;
     background-color: #FFF;
     border-radius: .5rem;
+    }
     @media (max-width: 750px) {
         display: block;
         width: 100%;
@@ -17,10 +19,9 @@ export const ContainerEstablishments = styled.div`
 `;
 
 export const StyleEstablishments = styled.div`
-    max-width: 300px;
+    width: 280px;
     display: inline-block;
     vertical-align: middle;
-    height: 150px;
     padding: .5rem;
     }
     h1 {
@@ -36,11 +37,11 @@ export const StyleEstablishments = styled.div`
         margin: 0;
         padding-left: .5rem;
     }
-    @media (max-width: 1190px) {
+    @media (max-width: 1220px) {
         display: block;
     }
     @media (max-width: 750px) {
-        max-width: 95%;
+        width: 95%;
         margin: 0 auto;
         padding-top: .5rem;
         padding-bottom: .5rem;
@@ -49,7 +50,7 @@ export const StyleEstablishments = styled.div`
 
 export const StyleImage = styled.img`
     display: inline-block;
-    width: 300px;
+    width: 280px;
     height: 150px;
     margin: 0 auto;
     vertical-align: middle;

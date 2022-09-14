@@ -18,6 +18,9 @@ export const ContainerHeader = styled.div`
         margin: 0;
         color: #000;
     }
+    @media (max-width: 850px) {
+        max-width: 95%;
+    }
 `;
 
 export const StyleForm = styled.form`
@@ -34,6 +37,9 @@ export const StyleForm = styled.form`
         font-family: sans-serif;
         padding-left: .5rem;
     }
+    @media (max-width: 850px) {
+        max-width: 95%;
+    }
 `;
 
 export const StyleInput = styled.input`
@@ -45,6 +51,10 @@ export const StyleInput = styled.input`
     padding: .5rem;
     border-radius: .5rem;
     border: none;
+    }
+    @media (max-width: 850px) {
+        max-width: 95%;
+    }
 `;
 
 export const StyleTextarea = styled.textarea`
@@ -59,6 +69,10 @@ export const StyleTextarea = styled.textarea`
     border-radius: .5rem;
     border: none;
     font-family: sans-serif;
+    }
+    @media (max-width: 850px) {
+        max-width: 95%;
+    }
 `;
 
 export const StyleButton = styled.button`
@@ -85,6 +99,10 @@ export const StyleButton = styled.button`
     &:hover{
         background-color: rgba(215, 214, 170, 0.25);
         cursor: pointer;
+        color: #000
+    }
+    @media (max-width: 850px) {
+        max-width: 97.1%;
     }
 `;
 

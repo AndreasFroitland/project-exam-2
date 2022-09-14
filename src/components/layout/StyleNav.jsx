@@ -40,6 +40,10 @@ export const ContainerLink = styled.div `
     &:hover{
         background-color: rgba(230, 229, 202, 0.25);
     }
+    @media (max-width: 850px) {
+    display: block;
+    margin-bottom: .5rem;
+    }
 `;
 
 export const NavbarLink = styled(Link) `
@@ -88,5 +92,9 @@ export const NavbarButton = styled.button `
 
     &:hover{
         color: #2F2F16;
+    }
+
+    @media (max-width: 850px) {
+        display: block;
     }
 `;
