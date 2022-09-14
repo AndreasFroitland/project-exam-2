@@ -9,6 +9,8 @@ import { ContainerNav,
 		 NavbarButton,
 		 ContainerLogo,
 		 NavbarLogo } from "../layout/StyleNav";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHouse, faRightToBracket, faComments, faHotel } from '@fortawesome/free-solid-svg-icons'
 
 function Nav() {
 	const [auth, setAuth] = useContext(AuthContext);
@@ -27,13 +29,13 @@ function Nav() {
 					<NavbarLogo src={require('../images/Holidaze-logo.png')} alt="Holidaze logo" />
 				</ContainerLogo>
 				<ContainerLink>
-			        <NavbarLink to="/">Home</NavbarLink>
+			        <NavbarLink to="/"><FontAwesomeIcon icon={faHouse} /> Home</NavbarLink>
 				</ContainerLink>
 				<ContainerLink>
-			        <NavbarLink to="/hotels">Hotels</NavbarLink>
+			        <NavbarLink to="/hotels"><FontAwesomeIcon icon={faHotel} /> Hotels</NavbarLink>
 				</ContainerLink>
 				<ContainerLink>
-			        <NavbarLink to="/contact">Contact</NavbarLink>
+			        <NavbarLink to="/contact"><FontAwesomeIcon icon={faComments} /> Contact</NavbarLink>
 				</ContainerLink>
 			    {auth ? (
 				    <>
@@ -41,12 +43,12 @@ function Nav() {
 					    <NavbarLink to="/dashboard">Dashboard</NavbarLink>
 					</ContainerLink>
 					<ContainerButton>
-					    <NavbarButton onClick={logout}>Logout</NavbarButton>
+					    <NavbarButton onClick={logout}><FontAwesomeIcon icon={faRightToBracket} /> Logout</NavbarButton>
 					</ContainerButton>
 				    </>
 			    ) : (
 					<ContainerLink>
-				        <NavbarLink to="/login">Login</NavbarLink>
+				        <NavbarLink to="/login"><FontAwesomeIcon icon={faRightToBracket} /> Login</NavbarLink>
 					</ContainerLink>
 			    )}
 			</ContainerNavbar>
