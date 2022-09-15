@@ -47,9 +47,9 @@ export const ContainerLink = styled.div `
         background-color: rgba(230, 229, 202, 0.25);
     }
     @media (max-width: 850px) {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: .5rem;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: .5rem;
     }
 `;
 

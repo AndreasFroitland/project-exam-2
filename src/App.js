@@ -12,6 +12,8 @@ import AddHotels from "./components/dashboard/hotels/AddHotels";
 import ContactPage from "./components/contact/ContactPage";
 import EstablishmentsPage from "./components/establishments/EstablishmentsPage";
 import EstablishmentsDetails from "./components/establishments/EstablishmentsDetails";
+import MessagesPage from "./components/dashboard/messages/MessagesPage";
+import EnquiriesPage from "./components/dashboard/enquiries/EnquiriesPage";
 
 function App() {
 	return (
@@ -38,6 +40,10 @@ function App() {
                         <Route path='/dashboard/hotels' element={<HotelsPage/>} />
 
                         <Route path='/dashboard/hotels/add' element={<AddHotels/>} />
+
+						<Route path='/dashboard/messages' element={<MessagesPage/>} />
+
+						<Route path='/dashboard/enquiries' element={<EnquiriesPage/>} />
 
 					</Routes>
 				        </div>
