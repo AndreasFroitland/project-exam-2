@@ -1,9 +1,20 @@
-import { Link } from "react-router-dom";
+import { StyleMenu, StyleLink } from "../layout/StyleDashboard";
 
 export default function DashboardMenu() {
 	return (
 		<nav className="dashboard">
-			Sections: <Link to="/dashboard/hotels">Hotels</Link> , <Link to="/dashboard/messages">Messages</Link> , <Link to="/dashboard/enquiries">Enquiries</Link>
+			<StyleLink to="/dashboard/hotels">
+				<StyleMenu>Hotels
+				</StyleMenu>
+			</StyleLink>
+			<StyleLink to="/dashboard/messages">
+				<StyleMenu>Messages
+				</StyleMenu>
+			</StyleLink>
+			<StyleLink to="/dashboard/enquiries">
+				<StyleMenu>Enquiries
+				</StyleMenu>
+			</StyleLink>
 		</nav>
 	);
 }

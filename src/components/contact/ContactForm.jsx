@@ -4,8 +4,7 @@ import { useNavigate } from "react-router-dom";
 import {yupResolver} from "@hookform/resolvers/yup";
 import FormError from "../common/FormError";
 import * as yup from "yup";
-import { BASE_URL } from "../../constants/api";
-import axios from "axios";
+import useAxios from "../../hooks/useAxios";
 import { ContainerForm, StyleForm, StyleFieldset, StyleInput, StyleTextarea, StyleButton } from "../layout/StyleForm";
 
 const schema = yup.object().shape({
@@ -19,18 +18,19 @@ export default function AddContact() {
 	const [serverError, setServerError] = useState(null);
 
     const navigate = useNavigate();
-    const url = BASE_URL + "wp/v2/messages";
+    const http = useAxios();
 
     const { register, handleSubmit, formState: { errors } } = useForm({
 		resolver: yupResolver(schema),
     });
 
     async function onSubmit(data){
+        setSubmitting(true);
+		setServerError(null);
+
         data.status = "publish";
 
         const contact = {
-            title: data.title,
-            content: data.content,
             status: "publish",
             fullname: data.fullname,
             email: data.email,
@@ -39,7 +39,7 @@ export default function AddContact() {
         console.log(contact)
 
         try {
-			const response = await axios.post(url, contact);
+			const response = await http.post("wp/v2/messages", contact);
 			console.log("response:", response.data);
 			navigate("/");
 		} catch (error) {

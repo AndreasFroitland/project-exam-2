@@ -15,8 +15,8 @@ export default function DashboardPage({ children }) {
 			        </StyleHeading>
 				    <ContainerMenu>
 			            <DashboardMenu />
-			            {children ? children : <p>Select a section</p>}
-				    </ContainerMenu>
+					</ContainerMenu>
+			            {children ? children : <p></p>}
 			    </ContainerDashboard>
 		    </ContainerPage>
 		</>

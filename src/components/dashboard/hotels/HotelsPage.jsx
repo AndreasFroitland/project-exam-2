@@ -5,10 +5,10 @@ import HotelsList from "./HotelsList";
 export default function HotelsPage() {
 	return (
 		<DashboardPage>
-			<p>
+			<div>
 				<Link to="/dashboard/hotels/add">Add hotel</Link>
-			</p>
-			<HotelsList />
+			</div>
+			    <HotelsList />
 		</DashboardPage>
 	);
 }
