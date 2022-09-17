@@ -38,7 +38,13 @@ export default function MessagesList() {
 			{messages.map((data) => {
 				return (
 					<div>
-						{data.form_value}
+						<div>
+						    <p>Name: {data.column_7}</p>
+						</div>
+						    <p>E-mail: {data.column_8}</p>
+						<div>
+						    <p>Message: {data.column_9}</p>
+						</div>
 					</div>
 				);
 			})}
