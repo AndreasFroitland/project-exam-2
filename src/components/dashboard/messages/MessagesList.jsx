@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import useAxios from "../../../hooks/useAxios";
+import axios from "axios";
 import { BASE_URL } from "../../../constants/api"
 
 export default function MessagesList() {
@@ -7,12 +7,10 @@ export default function MessagesList() {
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
 
-	const http = useAxios();
-
 	useEffect(function () {
 		async function getMessages() {
 			try {
-				const response = await http.get(BASE_URL + "contact-form-7/v1/contact-forms/136", {
+				const response = await axios.get(BASE_URL + "mo/v1/contactform", {
 					headers: {
 						'Content-type': 'multipart/form-data'
 					}
@@ -40,7 +38,7 @@ export default function MessagesList() {
 			{messages.map((data) => {
 				return (
 					<div>
-						{data.properties.form.content}
+						{data.form_value}
 					</div>
 				);
 			})}
