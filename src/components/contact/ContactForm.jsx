@@ -4,8 +4,14 @@ import { useNavigate } from "react-router-dom";
 import {yupResolver} from "@hookform/resolvers/yup";
 import FormError from "../common/FormError";
 import * as yup from "yup";
-import useAxios from "../../hooks/useAxios";
-import { ContainerForm, StyleForm, StyleFieldset, StyleInput, StyleTextarea, StyleButton } from "../layout/StyleForm";
+import axios from "axios";
+import { BASE_URL } from "../../constants/api"
+import { ContainerForm,
+         StyleForm,
+         StyleFieldset,
+         StyleInput,
+         StyleTextarea,
+         StyleButton } from "../layout/StyleForm";
 
 const schema = yup.object().shape({
     fullname: yup.string().required("Please enter your name").min(5, "Name must be at least 5 letters"),
@@ -18,7 +24,6 @@ export default function AddContact() {
 	const [serverError, setServerError] = useState(null);
 
     const navigate = useNavigate();
-    const http = useAxios();
 
     const { register, handleSubmit, formState: { errors } } = useForm({
 		resolver: yupResolver(schema),
@@ -27,8 +32,6 @@ export default function AddContact() {
     async function onSubmit(data){
         setSubmitting(true);
 		setServerError(null);
-
-        data.status = "publish";
 
         const contact = {
             status: "publish",
@@ -39,7 +42,11 @@ export default function AddContact() {
         console.log(contact)
 
         try {
-			const response = await http.post("wp/v2/messages", contact);
+			const response = await axios.post(BASE_URL + "contact-form-7/v1/contact-forms/136/feedback", contact, {
+                headers: {
+                    'Content-type': 'multipart/form-data'
+                }
+            });
 			console.log("response:", response.data);
 			navigate("/");
 		} catch (error) {
