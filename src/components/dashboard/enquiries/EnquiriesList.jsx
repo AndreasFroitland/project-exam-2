@@ -1,17 +1,16 @@
 import { useState, useEffect } from "react";
-import useAxios from "../../../hooks/useAxios";
+import axios from "axios";
+import { BASE_URL } from "../../../constants/api"
 
 export default function EnquiriesList() {
 	const [enquiries, setEnquiries] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
 
-	const http = useAxios();
-
 	useEffect(function () {
 		async function getEnquiries() {
 			try {
-				const response = await http.get("wp/v2/enquiry");
+				const response = await axios.get(BASE_URL + "mo/v1/bookingform");
 				console.log("response", response);
 				setEnquiries(response.data);
 			} catch (error) {
@@ -35,9 +34,15 @@ export default function EnquiriesList() {
 			{enquiries.map((enquiry) => {
 				return (
 					<div key={enquiry.id}>
-                        {enquiry.full_name}
+                        {enquiry.column_3}
                         <div>
-                        {enquiry.hotel_name}
+                            {enquiry.column_4}
+						</div>
+						<div>
+						    {enquiry.column_5}
+						</div>
+						<div>
+						    {enquiry.column_6}
                         </div>
 					</div>
 				);

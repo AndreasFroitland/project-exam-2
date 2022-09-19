@@ -14,6 +14,7 @@ import EstablishmentsPage from "./components/establishments/EstablishmentsPage";
 import EstablishmentsDetails from "./components/establishments/EstablishmentsDetails";
 import MessagesPage from "./components/dashboard/messages/MessagesPage";
 import EnquiriesPage from "./components/dashboard/enquiries/EnquiriesPage";
+import BookingPage from "./components/establishments/booking/BookingPage";
 
 function App() {
 	return (
@@ -32,6 +33,8 @@ function App() {
 						<Route path="/establishments/details/:id" element={<EstablishmentsDetails />} />
 
 			            <Route path='/contact' element={<ContactPage/>} />
+
+						<Route path='/booking' element={<BookingPage/>} />
 
                         <Route path='/login' element={<LoginPage/>} />
 

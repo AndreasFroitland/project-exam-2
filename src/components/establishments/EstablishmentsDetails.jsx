@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { BASE_URL } from "../../constants/api";
+import { Link } from "react-router-dom";
 
 export default function ViewPage() {
 	const [page, setPage] = useState(null);
@@ -41,6 +42,11 @@ export default function ViewPage() {
 			<div key={page.id}>
                 <p>{page.hotel_name}</p>
                 <p>{page.hotel_description}</p>
+				<div>
+				<Link to="/booking">
+				    Booking
+			    </Link>
+				</div>
             </div>
         </>
 	);
