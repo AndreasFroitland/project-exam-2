@@ -25,7 +25,9 @@ const Search = () => {
         />
     </InputStyle>
     <SearchStyle>
-        {data.filter((hotel) => {
+        {data
+        // eslint-disable-next-line
+        .filter((hotel) => {
             if (searchWord === "") {
               return "";
             } else if (
