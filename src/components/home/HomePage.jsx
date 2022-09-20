@@ -9,7 +9,8 @@ export default function HomePage() {
 			<StyleHeading>
 			    <Heading content="Home" />
 			</StyleHeading>
-			<div className="container"></div>
+			<div className="container">
+			</div>
 		  </ContainerPage>
 		</>
 	);

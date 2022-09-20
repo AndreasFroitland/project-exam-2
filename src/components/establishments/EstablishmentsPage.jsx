@@ -2,6 +2,7 @@ import Heading from "../layout/Heading";
 import { StyleHeading } from "../layout/Heading"
 import EstablishmentsList from "./EstablishmentsList";
 import { ContainerPage } from "../layout/Container";
+import Search from "./search/EstablishmentsSearch";
 
 export default function EstablishmentsPage() {
 	return (
@@ -10,7 +11,10 @@ export default function EstablishmentsPage() {
 			<StyleHeading>
 		        <Heading content="Establishments" />
 			</StyleHeading>
-			<EstablishmentsList />
+			    <div>
+					<Search />
+				</div>
+			    <EstablishmentsList />
 		  </ContainerPage>
 		</>
 	);
