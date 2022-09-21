@@ -4,11 +4,14 @@ import styled from "styled-components";
 export const ContainerForm = styled.div`
     width: 100%;
     margin: 0 auto;
+    padding-bottom: 3rem;
+    padding-top: .5rem;
 `;
 
 export const ContainerHeader = styled.div`
     max-width: 500px;
     margin: 0 auto;
+    padding-top: 3rem;
     }
     h1 {
         font-size: 1.3rem;
@@ -27,7 +30,7 @@ export const StyleForm = styled.form`
     display: block;
     max-width: 500px;
     margin: 0 auto;
-    background-color: #808000;
+    background-color: #004250;
     border-radius: .5rem;
     }
     p {

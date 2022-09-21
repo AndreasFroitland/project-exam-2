@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const ContainerStyle = styled.div`
     width: 100%;
-    background-color: #808000;
+    background-color: #004250;
     @media (max-width: 850px) {
         text-align: center;
         padding-bottom: 1rem;

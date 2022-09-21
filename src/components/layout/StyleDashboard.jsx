@@ -22,7 +22,7 @@ export const StyleMenu = styled.div`
     margin-right: 2rem;
     border: 2px solid #FFF;
     border-radius: 1.5rem;
-    background-color: #808000;
+    background-color: #004250;
     }
     @media (max-width: 850px) {
         display: block;
@@ -45,6 +45,6 @@ export const StyleLink = styled(Link)`
     font-weight: 700;
     }
     &:hover{
-        color: #2F2F16;
+        color: #ECECEC;
     }
 `;

@@ -76,7 +76,7 @@ export default function AddContact() {
 
                     <div>
                         <p>Message:</p>
-                        <StyleTextarea {...register("message")} placeholder="message..."/>
+                        <StyleTextarea {...register("message")} placeholder="message..." rows="7"/>
 						{errors.message && <FormError>{errors.message?.message}</FormError>}
 					</div>
 					<StyleButton>{submitting ? "Submitting..." : "Submit"}</StyleButton>

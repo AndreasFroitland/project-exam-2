@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const ContainerNav = styled.div`
     width: 100%;
     margin: 0 auto;
-    background-color: #808000;
+    background-color: #004250;
 `;
 
 /* Holidaze logo */

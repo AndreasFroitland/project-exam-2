@@ -70,7 +70,7 @@ export const StyleRating = styled.p`
     font-size: .8rem;
     font-weight: 700;
     color: #FFF;
-    background-color: #808000;
+    background-color: #004250;
     border-radius: .5rem;
 `;
 
@@ -80,12 +80,12 @@ export const StyleLink = styled(Link)`
     text-decoration: none;
     font-size: .8rem;
     font-weight: 700;
-    background-color: #808000;
+    background-color: #004250;
     border-radius: .5rem;
     padding: .5rem;
     margin: .5rem;
     }
     &:hover {
-        color: black;
+        color: #ECECEC;
     }
 `;
