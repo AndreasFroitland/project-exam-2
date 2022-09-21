@@ -1,42 +1,57 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const ContainerStyle = styled.div`
     width: 100%;
-    background: #808000;
-    background: -moz-linear-gradient(top,  #808000 0%, #808000 50%, #e6e5ca 51%, #e6e5ca 100%);
-    background: -webkit-linear-gradient(top,  #808000 0%,#808000 50%,#e6e5ca 51%,#e6e5ca 100%);
-    background: linear-gradient(to bottom,  #808000 0%,#808000 50%,#e6e5ca 51%,#e6e5ca 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808000', endColorstr='#e6e5ca',GradientType=0 );
+    background-color: #808000;
+    @media (max-width: 850px) {
+        text-align: center;
+        padding-bottom: 1rem;
+    }
 `;
 
 export const StyleSearch = styled.div`
     max-width: 1200px;
     margin: 0 auto;
     padding: .5rem;
+    @media (max-width: 850px) {
+        padding: 0rem;
+    }
 `;
 
 export const InputStyle = styled.input`
     width: 50%;
-    padding: .5rem .5rem .5rem .5rem;
+    padding: .5rem;
+    margin-left: .5rem;
     border: none;
     border-radius: .5rem;
+    @media (max-width: 850px) {
+        width: 95%;
+        border-radius: 0;
+        margin: 0 auto;
+    }
 `;
 
 export const SearchStyle = styled.div`
-    width: 50%;
+    max-width: 500px;
     z-index: 5;
-    margin-bottom: .5rem;
+    text-align: center;
+    margin-left: .5rem;
     .searchResults {
         width: 50%;
         position: relative;
         z-index: 5;
+        border-radius: 1.5rem;
         border: 2px solid #FFF;
-        background-color: #808000;
-        padding: 0rem 2.5rem 0rem 2.5rem;
-    p {
-        color: #FFF;
-        text-decoration: none;
-      }
+        background-color: rgba(186, 183, 108, 0.25);
+        margin-top: .5rem; 
     }
   }
+`;
+
+export const LinkStyle = styled(Link)`
+    color: #FFF;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1rem;
 `;

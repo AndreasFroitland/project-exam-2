@@ -5,8 +5,7 @@ export const ContainerEstablishments = styled.div`
     display: inline-block;
     max-width: 1200px;
     margin: 0 auto;
-    margin-right: .5rem;
-    margin-bottom: .5rem;
+    margin: .5rem;
     background-color: #FFF;
     border-radius: .5rem;
     }
@@ -19,7 +18,7 @@ export const ContainerEstablishments = styled.div`
 `;
 
 export const StyleEstablishments = styled.div`
-    width: 280px;
+    width: 270px;
     display: inline-block;
     vertical-align: middle;
     padding: .5rem;

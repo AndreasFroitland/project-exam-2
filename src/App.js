@@ -5,6 +5,7 @@ import HomePage from "./components/home/HomePage";
 import LoginPage from "./components/login/LoginPage";
 import DashboardPage from "./components/dashboard/DashboardPage";
 import Nav from "./components/layout/Nav";
+import Footer from "./components/layout/Footer";
 import { AuthProvider } from "./context/AuthContext";
 import "./App.css";
 import HotelsPage from "./components/dashboard/hotels/HotelsPage";
@@ -49,9 +50,11 @@ function App() {
 						<Route path='/dashboard/enquiries' element={<EnquiriesPage/>} />
 
 					</Routes>
+					
 				        </div>
 			    </Router>
 		    </AuthProvider>
+			<Footer />
 		</Container>
 	
 	);

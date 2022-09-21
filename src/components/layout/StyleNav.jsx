@@ -6,7 +6,6 @@ export const ContainerNav = styled.div`
     width: 100%;
     margin: 0 auto;
     background-color: #808000;
-    text-align: center;
 `;
 
 /* Holidaze logo */
@@ -17,8 +16,11 @@ export const ContainerLogo = styled.div`
 
 export const NavbarLogo = styled.img`
     height: 95px;
-    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    padding: .5rem .5rem .5rem .5rem;
     margin-right: 2rem;
+    }
+    @media (max-width: 1200px) {
+        display: none;
     }
     @media (max-width: 850px) {
         display: block;
@@ -29,9 +31,12 @@ export const NavbarLogo = styled.img`
 
 /* Navbar link container */
 export const ContainerNavbar  = styled.div`
-    width: 95%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 0rem 1rem 0rem;
+    @media (max-width: 850px) {
+        text-align: center;
+    }
 `;
 
 export const ContainerLink = styled.div `
@@ -45,6 +50,9 @@ export const ContainerLink = styled.div `
 
     &:hover{
         background-color: rgba(230, 229, 202, 0.25);
+    }
+    @media (max-width: 1200px) {
+        margin-left: 1rem;
     }
     @media (max-width: 850px) {
         display: block;
@@ -80,6 +88,12 @@ export const ContainerButton = styled.div `
 
     &:hover{
         background-color: rgba(230, 229, 202, 0.25);
+    }
+    @media (max-width: 1200px) {
+        margin-left: 1rem;
+    }
+    @media (max-width: 850px) {
+        margin: 0 auto;
     }
 `;
 

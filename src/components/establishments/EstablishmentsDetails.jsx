@@ -33,7 +33,7 @@ export default function ViewPage() {
 		[]
 	);
 
-	if (loading) return <div>Loading hotels...</div>;
+	if (loading) return <div>Loading establishment...</div>;
 
 	if (error) return <div>{}</div>;
 

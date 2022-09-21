@@ -2,8 +2,7 @@ import React from "react";
 import { useFetch } from "../../../hooks/useFetch";
 import { HOTELS } from "../../../constants/api";
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { ContainerStyle, StyleSearch, InputStyle, SearchStyle } from "../../layout/StyleSearch";
+import { ContainerStyle, StyleSearch, InputStyle, SearchStyle, LinkStyle } from "../../layout/StyleSearch";
 
 const Search = () => {
   const { data } = useFetch(HOTELS);
@@ -36,11 +35,11 @@ const Search = () => {
             }
           })
           .map((hotel) => (
-            <Link to={`establishments/details/${hotel.id}`} key={hotel.id}>
+            <LinkStyle to={`establishments/details/${hotel.id}`} key={hotel.id}>
               <div className="searchResults">
                 <p>{hotel.hotel_name}</p>
               </div>
-            </Link>
+            </LinkStyle>
           ))}
         </SearchStyle>
       </StyleSearch>
