@@ -31,7 +31,7 @@ export const NavbarLogo = styled.img`
 export const ContainerNavbar  = styled.div`
     width: 95%;
     margin: 0 auto;
-    padding: 2rem 0rem 2rem 0rem;
+    padding: 2rem 0rem 1rem 0rem;
 `;
 
 export const ContainerLink = styled.div `

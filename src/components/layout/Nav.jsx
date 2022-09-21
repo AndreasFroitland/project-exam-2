@@ -11,6 +11,7 @@ import { ContainerNav,
 		 NavbarLogo } from "../layout/StyleNav";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse, faRightToBracket, faComments, faHotel, faCogs } from '@fortawesome/free-solid-svg-icons'
+import Search from "../establishments/search/EstablishmentsSearch";
 
 function Nav() {
 	const [auth, setAuth] = useContext(AuthContext);
@@ -67,6 +68,7 @@ function Nav() {
 					</NavbarLink>
 			    )}
 			</ContainerNavbar>
+		  <Search />
 		</ContainerNav>
 	);
 }

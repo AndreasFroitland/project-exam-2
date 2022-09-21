@@ -3,7 +3,7 @@ import { useFetch } from "../../../hooks/useFetch";
 import { HOTELS } from "../../../constants/api";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { InputStyle, SearchStyle } from "../../layout/StyleSearch";
+import { ContainerSearch, InputStyle, SearchStyle } from "../../layout/StyleSearch";
 
 const Search = () => {
   const { data } = useFetch(HOTELS);
@@ -11,7 +11,8 @@ const Search = () => {
 
   return (
     <>
-    <InputStyle>
+      <ContainerSearch>
+      <InputStyle>
         <input
           type="text"
           placeholder="Search..."
@@ -23,8 +24,8 @@ const Search = () => {
             }, 100)
           }
         />
-    </InputStyle>
-    <SearchStyle>
+      </InputStyle>
+      <SearchStyle>
         {data
         // eslint-disable-next-line
         .filter((hotel) => {
@@ -45,7 +46,8 @@ const Search = () => {
               </div>
             </Link>
           ))}
-    </SearchStyle>
+      </SearchStyle>
+      </ContainerSearch>
     </>
   );
 };
