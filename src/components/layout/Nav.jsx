@@ -24,6 +24,7 @@ function Nav() {
 	}
 
 	return (
+		<div>
 		<ContainerNav>
 			<ContainerNavbar>
 				<ContainerLogo>
@@ -68,8 +69,9 @@ function Nav() {
 					</NavbarLink>
 			    )}
 			</ContainerNavbar>
-		  <Search />
 		</ContainerNav>
+		    <Search />
+		</div>
 	);
 }
 

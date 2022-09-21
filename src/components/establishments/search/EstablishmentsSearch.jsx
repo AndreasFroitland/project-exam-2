@@ -3,7 +3,7 @@ import { useFetch } from "../../../hooks/useFetch";
 import { HOTELS } from "../../../constants/api";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ContainerSearch, InputStyle, SearchStyle } from "../../layout/StyleSearch";
+import { ContainerStyle, StyleSearch, InputStyle, SearchStyle } from "../../layout/StyleSearch";
 
 const Search = () => {
   const { data } = useFetch(HOTELS);
@@ -11,21 +11,17 @@ const Search = () => {
 
   return (
     <>
-      <ContainerSearch>
-      <InputStyle>
-        <input
-          type="text"
-          placeholder="Search..."
+    <ContainerStyle>
+      <StyleSearch>
+        <InputStyle type="text" placeholder="Search..."
           onChange={(event) => setSearchWord(event.target.value)}
           value={searchWord}
-          onBlur={() =>
-            setTimeout(() => {
+          onBlur={() => setTimeout(() => {
               setSearchWord("");
             }, 100)
           }
         />
-      </InputStyle>
-      <SearchStyle>
+        <SearchStyle>
         {data
         // eslint-disable-next-line
         .filter((hotel) => {
@@ -40,14 +36,15 @@ const Search = () => {
             }
           })
           .map((hotel) => (
-            <Link to={`details/${hotel.id}`} key={hotel.id}>
+            <Link to={`establishments/details/${hotel.id}`} key={hotel.id}>
               <div className="searchResults">
-                <h4>{hotel.hotel_name}</h4>
+                <p>{hotel.hotel_name}</p>
               </div>
             </Link>
           ))}
-      </SearchStyle>
-      </ContainerSearch>
+        </SearchStyle>
+      </StyleSearch>
+      </ContainerStyle>
     </>
   );
 };
