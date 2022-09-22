@@ -68,7 +68,7 @@ export default function AddHotels() {
 
 					<div>
 						<p>Hotel description:</p>
-						<StyleTextarea name="hotel_description" placeholder="hotel description..." {...register("hotel_description")} />
+						<StyleTextarea name="hotel_description" placeholder="hotel description..." rows="7" {...register("hotel_description")} />
 					</div>
 
 					<StyleButton>{submitting ? "Submitting..." : "Submit"}</StyleButton>

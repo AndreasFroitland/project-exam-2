@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { BASE_URL } from "../../../constants/api"
+import { BASE_URL } from "../../../constants/api";
+import { ContainerMessage, StyleMessage } from "../../layout/StyleDashboard";
 
 export default function MessagesList() {
 	const [messages, setMessages] = useState([]);
@@ -34,20 +35,18 @@ export default function MessagesList() {
 	if (error) return <div>{}</div>;
 
 	return (
-		<ul className="messages__list">
+		<div>
 			{messages.map((data) => {
 				return (
-					<div>
-						<div>
+					<ContainerMessage>
+						<StyleMessage>
 						    <p>Name: {data.column_7}</p>
-						</div>
 						    <p>E-mail: {data.column_8}</p>
-						<div>
 						    <p>Message: {data.column_9}</p>
-						</div>
-					</div>
+						</StyleMessage>
+					</ContainerMessage>
 				);
 			})}
-		</ul>
+		</div>
 	);
 }

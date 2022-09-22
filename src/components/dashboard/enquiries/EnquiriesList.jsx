@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { BASE_URL } from "../../../constants/api"
+import { ContainerEnquiries, StyleEnquiries } from "../../layout/StyleDashboard";
 
 export default function EnquiriesList() {
 	const [enquiries, setEnquiries] = useState([]);
@@ -30,23 +31,19 @@ export default function EnquiriesList() {
 	if (error) return <div>{}</div>;
 
 	return (
-		<ul className="enquiries__list">
+		<div>
 			{enquiries.map((enquiry) => {
 				return (
-					<div key={enquiry.id}>
-                        {enquiry.column_3}
-                        <div>
-                            {enquiry.column_4}
-						</div>
-						<div>
-						    {enquiry.column_5}
-						</div>
-						<div>
-						    {enquiry.column_6}
-                        </div>
-					</div>
+					<ContainerEnquiries>
+						<StyleEnquiries>
+                            <p>Name: {enquiry.column_3}</p>
+                            <p>E-mail: {enquiry.column_4}</p>
+						    <p>Hotel: {enquiry.column_5}</p>
+						    <p>Date: {enquiry.column_6}</p>
+                        </StyleEnquiries>
+					</ContainerEnquiries>
 				);
 			})}
-		</ul>
+		</div>
 	);
 }
