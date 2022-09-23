@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { BASE_URL } from "../../constants/api";
-import { Link } from "react-router-dom";
+import { ContainerEstablishment,
+	     StyleEstablishment,
+		 StyleLink,
+		 ContainerLink,
+		 StyleImage,
+		 ContainerImage } from "../layout/StyleDetails";
 
 export default function ViewPage() {
 	const [page, setPage] = useState(null);
@@ -39,15 +44,18 @@ export default function ViewPage() {
 
 	return (
 		<>
-			<div key={page.id}>
-                <p>{page.hotel_name}</p>
-                <p>{page.hotel_description}</p>
-				<div>
-				<Link to="/booking">
-				    Booking
-			    </Link>
-				</div>
-            </div>
+			<ContainerEstablishment>
+				<StyleEstablishment>
+                        <h2>{page.hotel_name}</h2>
+						    <ContainerImage>
+								<StyleImage src={page.hotel_gallery[0].guid} alt={page.hotel_name}/>
+							</ContainerImage>
+                        <p>{page.hotel_description}</p>
+				    <StyleLink to="/booking">
+				        <ContainerLink>Book now</ContainerLink>
+			        </StyleLink>
+				</StyleEstablishment>
+            </ContainerEstablishment>
         </>
 	);
 }

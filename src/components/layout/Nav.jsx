@@ -28,7 +28,7 @@ function Nav() {
 		<ContainerNav>
 			<ContainerNavbar>
 				<ContainerLogo>
-					<NavbarLogo src={require('../images/Holidaze-logo.png')} alt="Holidaze logo" />
+					<NavbarLogo src={require('./images/Holidaze-logo.png')} alt="Holidaze logo" />
 				</ContainerLogo>
 				
 			    <NavbarLink to="/">

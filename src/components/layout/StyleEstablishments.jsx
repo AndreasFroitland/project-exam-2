@@ -18,17 +18,16 @@ export const ContainerEstablishments = styled.div`
 `;
 
 export const StyleEstablishments = styled.div`
-    width: 270px;
-    display: inline-block;
+    width: 350px;
     vertical-align: middle;
     padding: .5rem;
     }
     h1 {
+        display: inline-block;
         font-family: sans-serif;
         font-size: 1rem;
         font-weight: 900;
         margin: 0;
-        display: inline-block;
         padding: .5rem;
     }
     p {
@@ -48,8 +47,7 @@ export const StyleEstablishments = styled.div`
 `;
 
 export const StyleImage = styled.img`
-    display: inline-block;
-    width: 280px;
+    width: 100%;
     height: 150px;
     margin: 0 auto;
     vertical-align: middle;
