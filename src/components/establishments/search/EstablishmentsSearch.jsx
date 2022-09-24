@@ -1,11 +1,11 @@
 import React from "react";
 import { useFetch } from "../../../hooks/useFetch";
-import { HOTELS } from "../../../constants/api";
+import { ESTABLISHMENTS } from "../../../constants/api";
 import { useState } from "react";
 import { ContainerStyle, StyleSearch, InputStyle, SearchStyle, LinkStyle } from "../../layout/StyleSearch";
 
 const Search = () => {
-  const { data } = useFetch(HOTELS);
+  const { data } = useFetch(ESTABLISHMENTS);
   const [searchWord, setSearchWord] = useState("");
 
   return (

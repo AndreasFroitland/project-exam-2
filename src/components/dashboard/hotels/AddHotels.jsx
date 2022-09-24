@@ -10,8 +10,13 @@ import DashboardPage from "../DashboardPage";
 import { ContainerForm, ContainerHeader, StyleForm, StyleInput, StyleTextarea, StyleButton, StyleFieldset } from "../../layout/StyleForm";
 
 const schema = yup.object().shape({
-	hotel_name: yup.string().required("Please enter a hotel name"),
+	hotel_name: yup.string().required("Please enter the hotel name"),
 	hotel_description: yup.string().required("Please enter a hotel description"),
+	hotel_short_description: yup.string().required("Please enter a hotel short description"),
+	hotel_price: yup.string().required("Please enter hotel price"),
+	hotel_rating: yup.string().required("Please enter hotel rating"),
+	hotel_reviews: yup.string().required("Please enter number of reviews"),
+	hotel_featured_image: yup.string().required("Please enter a url for the featured image"),
 });
 
 export default function AddHotels() {
@@ -37,6 +42,11 @@ export default function AddHotels() {
 			status: "publish",
 			hotel_name: data.hotel_name,
 			hotel_description: data.hotel_description,
+			hotel_short_description: data.hotel_short_description,
+			hotel_price: data.hotel_price,
+			hotel_rating: data.hotel_rating,
+			hotel_reviews: data.hotel_reviews,
+			hotel_featured_image: data.hotel_featured_image.guid,
 		}
 
 		try {
@@ -60,6 +70,7 @@ export default function AddHotels() {
 			<StyleForm onSubmit={handleSubmit(onSubmit)}>
 				{serverError && <FormError>{serverError}</FormError>}
 				<StyleFieldset disabled={submitting}>
+
 					<div>
 						<p>Hotel name:</p>
 						<StyleInput name="hotel_name" placeholder="hotel name..." {...register("hotel_name")} />
@@ -67,8 +78,39 @@ export default function AddHotels() {
 					</div>
 
 					<div>
+						<p>Hotel featured image:</p>
+						<StyleInput name="hotel_featured_image" placeholder="hotel featured image..." {...register("hotel_featured_image")} />
+						{errors.hotel_featured_image && <FormError>{errors.hotel_featured_image?.message}</FormError>}
+					</div>
+
+					<div>
+						<p>Hotel short description:</p>
+						<StyleTextarea name="hotel_short_description" placeholder="hotel description..." rows="5" {...register("hotel_short_description")} />
+						{errors.hotel_short_description && <FormError>{errors.hotel_short_description?.message}</FormError>}
+					</div>
+
+					<div>
 						<p>Hotel description:</p>
 						<StyleTextarea name="hotel_description" placeholder="hotel description..." rows="7" {...register("hotel_description")} />
+						{errors.hotel_description && <FormError>{errors.hotel_description?.message}</FormError>}
+					</div>
+
+					<div>
+						<p>Hotel Price:</p>
+						<StyleInput name="hotel_price" placeholder="hotel price..." {...register("hotel_price")} />
+						{errors.hotel_price && <FormError>{errors.hotel_price?.message}</FormError>}
+					</div>
+
+					<div>
+						<p>Hotel Rating:</p>
+						<StyleInput name="hotel_rating" placeholder="hotel rating..." {...register("hotel_rating")} />
+						{errors.hotel_rating && <FormError>{errors.hotel_rating?.message}</FormError>}
+					</div>
+
+					<div>
+						<p>Hotel reviews:</p>
+						<StyleInput name="hotel_reviews" placeholder="hotel reviews..." {...register("hotel_reviews")} />
+						{errors.hotel_reviews && <FormError>{errors.hotel_reviews?.message}</FormError>}
 					</div>
 
 					<StyleButton>{submitting ? "Submitting..." : "Submit"}</StyleButton>

@@ -10,7 +10,6 @@ import { ContainerForm,
          StyleForm,
          StyleFieldset,
          StyleInput,
-         StyleTextarea,
          StyleButton } from "../../layout/StyleForm";
 
 const schema = yup.object().shape({
@@ -78,7 +77,7 @@ export default function AddBooking() {
 
                     <div>
                         <p>Hotel:</p>
-                        <StyleTextarea {...register("hotel")} placeholder="hotel..."/>
+                        <StyleInput {...register("hotel")} placeholder="hotel..."/>
 						{errors.hotel && <FormError>{errors.hotel?.message}</FormError>}
 					</div>
 

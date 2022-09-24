@@ -1,36 +1,17 @@
-import { useState, useEffect } from "react";
-import { BASE_URL } from "../../constants/api";
-import { ContainerEstablishments, StyleEstablishments, StyleImage, StyleRating, StyleLink } from "../layout/StyleEstablishments";
+import { ESTABLISHMENTS } from "../../constants/api";
+import { useFetch } from "../../hooks/useFetch";
+import { ContainerEstablishments,
+         StyleEstablishments,
+         StyleImage,
+         StyleRating,
+         StyleLink } from "../layout/StyleEstablishments";
 
 export default function EstablishmentsList() {
-    const [establishments, setEstablishments] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-
-    useEffect(function() {
-        async function getEstablishments() {
-            try {
-                const response = await fetch(BASE_URL + "wp/v2/hotel");
-                const json = await response.json();
-
-                setEstablishments(json);
-
-            } catch (error) {
-                setError(error.toString());
-            } finally {
-                setLoading(false);
-            }
-        }
-        getEstablishments();
-    }, []);
-
-    if (loading) return <div>Loading establishments...</div>;
-
-	if (error) return <div>{}</div>;
+    const { data } = useFetch(ESTABLISHMENTS);
 
     return (
         <div className="establishments">
-            {establishments.map((establishments) => {
+            {data.map((establishments) => {
                 return (
                     <ContainerEstablishments key={establishments.id}>
                         <StyleEstablishments>
