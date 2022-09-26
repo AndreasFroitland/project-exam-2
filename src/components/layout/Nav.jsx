@@ -8,7 +8,7 @@ import { ContainerNav,
 		 ContainerButton,
 		 NavbarButton,
 		 ContainerLogo,
-		 NavbarLogo } from "../layout/StyleNav";
+		 NavbarLogo } from "./styles/StyleNav";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse, faRightToBracket, faComments, faHotel, faCogs } from '@fortawesome/free-solid-svg-icons'
 import Search from "../establishments/search/EstablishmentsSearch";

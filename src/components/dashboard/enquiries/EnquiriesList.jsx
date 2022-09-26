@@ -1,6 +1,6 @@
 import { ENQUIRIES } from "../../../constants/api";
 import { useFetch } from "../../../hooks/useFetch";
-import { ContainerEnquiries, StyleEnquiries } from "../../layout/StyleDashboard";
+import { ContainerEnquiries, StyleEnquiries } from "../../layout/styles/StyleDashboard";
 
 export default function EnquiriesList() {
 	const { data } = useFetch(ENQUIRIES);

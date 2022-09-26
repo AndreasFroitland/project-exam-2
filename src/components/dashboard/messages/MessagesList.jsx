@@ -1,6 +1,6 @@
 import { CONTACT } from "../../../constants/api";
 import { useFetch } from "../../../hooks/useFetch";
-import { ContainerMessage, StyleMessage } from "../../layout/StyleDashboard";
+import { ContainerMessage, StyleMessage } from "../../layout/styles/StyleDashboard";
 
 export default function MessagesList() {
 	const { data } = useFetch(CONTACT);

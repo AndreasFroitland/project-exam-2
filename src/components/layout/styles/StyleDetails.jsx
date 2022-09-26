@@ -33,6 +33,7 @@ export const StyleImage = styled.img`
     object-fit: cover;
     overflow: hidden;
     border-radius: .5rem;
+    box-shadow: .1rem .1rem .5rem #565656;
 `;
 
 export const StyleLink = styled(Link)`
@@ -57,4 +58,5 @@ export const ContainerLink = styled.div`
     padding: .5rem;
     margin: 1rem;
     width: 150px;
+    box-shadow: .1rem .1rem .5rem #565656;
 `;

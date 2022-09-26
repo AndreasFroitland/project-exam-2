@@ -1,6 +1,6 @@
 import DashboardPage from "../DashboardPage";
 import HotelsList from "./HotelsList";
-import { ContainerAddHotel, StyleAddHotel } from "../../layout/StyleDashboard";
+import { ContainerAddHotel, StyleAddHotel } from "../../layout/styles/StyleDashboard";
 
 export default function HotelsPage() {
 	return (

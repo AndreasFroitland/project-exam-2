@@ -3,7 +3,7 @@ import Heading from "../layout/Heading";
 import { StyleHeading } from "../layout/Heading"
 import DashboardMenu from "./DashboardMenu";
 import { ContainerPage } from "../layout/Container";
-import { ContainerDashboard, ContainerMenu } from "../layout/StyleDashboard";
+import { ContainerDashboard, ContainerMenu } from "../layout/styles/StyleDashboard";
 
 export default function DashboardPage({ children }) {
 	return (

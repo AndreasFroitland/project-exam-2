@@ -6,7 +6,7 @@ import { ContainerEstablishment,
 		 StyleLink,
 		 ContainerLink,
 		 StyleImage,
-		 ContainerImage } from "../layout/StyleDetails";
+		 ContainerImage } from "../layout/styles/StyleDetails";
 
 export default function ViewPage() {
 	const [page, setPage] = useState(null);

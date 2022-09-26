@@ -32,6 +32,7 @@ export const StyleForm = styled.form`
     margin: 0 auto;
     background-color: #004250;
     border-radius: .5rem;
+    box-shadow: .1rem .1rem .5rem #565656;
     }
     p {
         color: #FFF;

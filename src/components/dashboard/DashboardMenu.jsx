@@ -1,4 +1,4 @@
-import { StyleMenu, StyleLink } from "../layout/StyleDashboard";
+import { StyleMenu, StyleLink } from "../layout/styles/StyleDashboard";
 
 export default function DashboardMenu() {
 	return (

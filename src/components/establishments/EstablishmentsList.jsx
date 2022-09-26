@@ -4,7 +4,7 @@ import { ContainerEstablishments,
          StyleEstablishments,
          StyleImage,
          StyleRating,
-         StyleLink } from "../layout/StyleEstablishments";
+         StyleLink } from "../layout/styles/StyleEstablishments";
 
 export default function EstablishmentsList() {
     const { data } = useFetch(ESTABLISHMENTS);

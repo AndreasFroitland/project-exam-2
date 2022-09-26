@@ -7,7 +7,7 @@ import FormError from "../../common/FormError";
 import useAxios from "../../../hooks/useAxios";
 import Heading from "../../layout/Heading";
 import DashboardPage from "../DashboardPage";
-import { ContainerForm, ContainerHeader, StyleForm, StyleInput, StyleTextarea, StyleButton, StyleFieldset } from "../../layout/StyleForm";
+import { ContainerForm, ContainerHeader, StyleForm, StyleInput, StyleTextarea, StyleButton, StyleFieldset } from "../../layout/styles/StyleForm";
 
 const schema = yup.object().shape({
 	hotel_name: yup.string().required("Please enter the hotel name"),

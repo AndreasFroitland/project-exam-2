@@ -1,4 +1,4 @@
-import { ContainerFooter } from "./StyleFooter";
+import { ContainerFooter } from "./styles/StyleFooter";
 
 function Footer() {
 	return (

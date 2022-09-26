@@ -10,7 +10,7 @@ import { ContainerForm,
          StyleForm,
          StyleFieldset,
          StyleInput,
-         StyleButton } from "../../layout/StyleForm";
+         StyleButton } from "../../layout/styles/StyleForm";
 
 const schema = yup.object().shape({
     fullname: yup.string().required("Please enter your name").min(5, "Name must be at least 5 letters"),

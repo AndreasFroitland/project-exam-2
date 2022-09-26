@@ -41,47 +41,32 @@ export const StyleEstablishments = styled.div`
     @media (max-width: 750px) {
         width: 95%;
         margin: 0 auto;
-        padding-top: .5rem;
-        padding-bottom: .5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 `;
 
 export const StyleImage = styled.img`
     width: 100%;
-    height: 150px;
+    height: 350px;
     margin: 0 auto;
-    vertical-align: middle;
     object-fit: cover;
-    object-position: 50% 50%;
-    overflow: hidden;
     border-radius: .5rem;
-    @media (max-width: 750px) {
-        width: 100%;
-        padding: 0;
-    }
-`;
-
-export const StyleRating = styled.p`
-    display: inline-block;
-    padding: .5rem;
-    font-family: times new roman;
-    font-size: .8rem;
-    font-weight: 700;
-    color: #FFF;
-    background-color: #004250;
-    border-radius: .5rem;
+    box-shadow: .1rem .1rem .5rem #565656;
 `;
 
 export const StyleLink = styled(Link)`
     display: inline-block;
     color: #FFF;
     text-decoration: none;
+    text-align: center;
     font-size: .8rem;
     font-weight: 700;
     background-color: #004250;
     border-radius: .5rem;
     padding: .5rem;
-    margin: .5rem;
+    width: 50%;
+    box-shadow: .1rem .1rem .5rem #565656;
     }
     &:hover {
         color: #ECECEC;

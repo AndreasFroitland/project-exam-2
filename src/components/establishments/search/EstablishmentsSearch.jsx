@@ -2,7 +2,7 @@ import React from "react";
 import { useFetch } from "../../../hooks/useFetch";
 import { ESTABLISHMENTS } from "../../../constants/api";
 import { useState } from "react";
-import { ContainerStyle, StyleSearch, InputStyle, SearchStyle, LinkStyle } from "../../layout/StyleSearch";
+import { ContainerStyle, StyleSearch, InputStyle, SearchStyle, LinkStyle } from "../../layout/styles/StyleSearch";
 
 const Search = () => {
   const { data } = useFetch(ESTABLISHMENTS);

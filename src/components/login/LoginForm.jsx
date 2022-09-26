@@ -7,7 +7,7 @@ import axios from "axios";
 import FormError from "../common/FormError";
 import { BASE_URL, TOKEN_PATH } from "../../constants/api";
 import AuthContext from "../../context/AuthContext";
-import { ContainerForm, StyleForm, StyleFieldset, StyleInput, StyleButton } from "../layout/StyleForm";
+import { ContainerForm, StyleForm, StyleFieldset, StyleInput, StyleButton } from "../layout/styles/StyleForm";
 
 const url = BASE_URL + TOKEN_PATH;
 
