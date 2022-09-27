@@ -14,6 +14,7 @@ Heading.propTypes = {
 
 export default Heading;
 
+// Heading style
 export const StyleHeading = styled.div`
     color: #000;
 	padding: .5rem;

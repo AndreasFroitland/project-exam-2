@@ -6,12 +6,12 @@ import { ContainerPage } from "../layout/Container";
 export default function EstablishmentsPage() {
 	return (
 		<>
-		  <ContainerPage>
-			<StyleHeading>
-		        <Heading content="Establishments" />
-			</StyleHeading>
-			    <EstablishmentsList />
-		  </ContainerPage>
+		    <ContainerPage>
+			    <StyleHeading>
+		            <Heading content="Establishments" />
+			    </StyleHeading>
+			        <EstablishmentsList />
+		    </ContainerPage>
 		</>
 	);
 }

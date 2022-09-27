@@ -25,40 +25,39 @@ function App() {
 		    <AuthProvider>
 			    <Router>
 				    <Nav />
-					<Header />
-				        <div className="container">
-					<Routes>
+					    <Header />
+				            <div className="container">
+					    <Routes>
 
-                        <Route path='/' element={<HomePage/>} />
+                            <Route path='/' element={<HomePage/>} />
 
-						<Route path='/establishments' element={<EstablishmentsPage/>} />
+						    <Route path='/establishments' element={<EstablishmentsPage/>} />
 
-						<Route path="/establishments/details/:id" element={<EstablishmentsDetails />} />
+						    <Route path="/establishments/details/:id" element={<EstablishmentsDetails />} />
 
-			            <Route path='/contact' element={<ContactPage/>} />
+			                <Route path='/contact' element={<ContactPage/>} />
 
-						<Route path='/booking' element={<BookingPage/>} />
+						    <Route path='/booking' element={<BookingPage/>} />
 
-                        <Route path='/login' element={<LoginPage/>} />
+                            <Route path='/login' element={<LoginPage/>} />
 
-                        <Route path='/dashboard' element={<DashboardPage/>} />
+                            <Route path='/dashboard' element={<DashboardPage/>} />
 
-                        <Route path='/dashboard/hotels' element={<HotelsPage/>} />
+                            <Route path='/dashboard/hotels' element={<HotelsPage/>} />
 
-                        <Route path='/dashboard/hotels/add' element={<AddHotels/>} />
+                            <Route path='/dashboard/hotels/add' element={<AddHotels/>} />
 
-						<Route path='/dashboard/messages' element={<MessagesPage/>} />
+						    <Route path='/dashboard/messages' element={<MessagesPage/>} />
 
-						<Route path='/dashboard/enquiries' element={<EnquiriesPage/>} />
+						    <Route path='/dashboard/enquiries' element={<EnquiriesPage/>} />
 
-					</Routes>
-					
-				        </div>
+					    </Routes>
+				            </div>
 			    </Router>
 		    </AuthProvider>
-			<Footer />
+			    <Footer />
 		</Container>
-	
+		
 	);
 }
 

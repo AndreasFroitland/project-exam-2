@@ -6,12 +6,12 @@ import { ContainerHeader } from "../../layout/styles/StyleForm";
 export default function BookingPage() {
 	return (
 		<>
-		  <ContainerPage>
-			<ContainerHeader>
-			  <Heading content="Booking" />
-			</ContainerHeader>
-			<BookingForm />
-		  </ContainerPage>
+		    <ContainerPage>
+			    <ContainerHeader>
+			        <Heading content="Booking" />
+			    </ContainerHeader>
+			        <BookingForm />
+		    </ContainerPage>
 		</>
 	);
 }

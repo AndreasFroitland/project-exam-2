@@ -11,6 +11,7 @@ import { ContainerForm, StyleForm, StyleFieldset, StyleInput, StyleButton } from
 
 const url = BASE_URL + TOKEN_PATH;
 
+// yup validation
 const schema = yup.object().shape({
 	username: yup.string().required("Please enter your username"),
 	password: yup.string().required("Please enter your password"),
@@ -45,27 +46,27 @@ export default function LoginForm() {
 		}
 	}
 
+	// data to be returned on page
 	return (
         <>
-		  <ContainerForm>
-            <StyleForm onSubmit={handleSubmit(onSubmit)}>
-              {loginError && <FormError>{loginError}</FormError>}
-              <StyleFieldset disabled={submitting}>
-                <div>
-				  <p>Username:</p>
-                  <StyleInput placeholder="username..." {...register("username", { required: true })} />
-                  {errors?.username && <FormError>{errors.username.message}</FormError>}
-                </div>
-
-                <div>
-				  <p>Password:</p>
-                  <StyleInput placeholder="password..." {...register("password", { required: true })} type="password" />
-                  {errors?.password && <FormError>{errors.password.message}</FormError>}
-                </div>
-                  <StyleButton>{submitting ? "Loggin in..." : "Login"}</StyleButton>
-              </StyleFieldset>
-            </StyleForm>
-		  </ContainerForm>
+		    <ContainerForm>
+                <StyleForm onSubmit={handleSubmit(onSubmit)}>
+                {loginError && <FormError>{loginError}</FormError>}
+                    <StyleFieldset disabled={submitting}>
+                        <div>
+				            <p>Username:</p>
+                            <StyleInput placeholder="username..." {...register("username", { required: true })} />
+                            {errors?.username && <FormError>{errors.username.message}</FormError>}
+                        </div>
+                        <div>
+				            <p>Password:</p>
+                            <StyleInput placeholder="password..." {...register("password", { required: true })} type="password" />
+                            {errors?.password && <FormError>{errors.password.message}</FormError>}
+                        </div>
+                        <StyleButton>{submitting ? "Loggin in..." : "Login"}</StyleButton>
+                    </StyleFieldset>
+                </StyleForm>
+		    </ContainerForm>
         </>
       );
   }

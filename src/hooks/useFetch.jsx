@@ -8,20 +8,20 @@ export const useFetch = (url, request) => {
     const getApi = useCallback(async () => {
         setLoading(true);
 
-      try {
-          const res = await fetch(url, request);
-          const data = await res.json();
+        try {
+            const res = await fetch(url, request);
+            const data = await res.json();
 
-          setData(data);
-          setLoading(false);
-      } catch {
-          setHasError(true);
-          setLoading(false);
-      }
+            setData(data);
+            setLoading(false);
+        } catch {
+            setHasError(true);
+            setLoading(false);
+        }
     }, [url, request]);
 
   useEffect(() => {
-    getApi();
+      getApi();
   }, [url, getApi]);
 
   return { data, loading, hasError };

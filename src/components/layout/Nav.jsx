@@ -25,11 +25,11 @@ function Nav() {
 
 	return (
 		<div>
-		<ContainerNav>
-			<ContainerNavbar>
-				<ContainerLogo>
-					<NavbarLogo src={require('./images/Holidaze-logo.png')} alt="Holidaze logo" />
-				</ContainerLogo>
+		    <ContainerNav>
+			    <ContainerNavbar>
+				    <ContainerLogo>
+					    <NavbarLogo src={require('./images/Holidaze-logo.png')} alt="Holidaze logo" />
+				    </ContainerLogo>
 				
 			    <NavbarLink to="/">
 					<ContainerLink>
@@ -68,9 +68,9 @@ function Nav() {
 						</ContainerLink>
 					</NavbarLink>
 			    )}
-			</ContainerNavbar>
-		</ContainerNav>
-		    <Search />
+			    </ContainerNavbar>
+		    </ContainerNav>
+		        <Search />
 		</div>
 	);
 }

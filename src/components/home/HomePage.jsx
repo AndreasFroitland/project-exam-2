@@ -6,12 +6,12 @@ import EstablishmentsFeatured from "./HomeFeatured";
 export default function HomePage() {
 	return (
 		<>
-		  <ContainerPage>
-			<StyleHeading>
-			    <Heading content="Home" />
-			</StyleHeading>
-			<EstablishmentsFeatured />
-		  </ContainerPage>
+		    <ContainerPage>
+			    <StyleHeading>
+			        <Heading content="Home" />
+			    </StyleHeading>
+			        <EstablishmentsFeatured />
+		    </ContainerPage>
 		</>
 	);
 }
