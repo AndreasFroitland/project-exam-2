@@ -1,14 +1,15 @@
 import React from "react";
-import Container from "./components/layout/Container";
+import "./App.css";
+import { AuthProvider } from "./context/AuthContext";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Container from "./components/layout/Container";
 import HomePage from "./components/home/HomePage";
 import LoginPage from "./components/login/LoginPage";
 import DashboardPage from "./components/dashboard/DashboardPage";
 import Nav from "./components/layout/Nav";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
-import { AuthProvider } from "./context/AuthContext";
-import "./App.css";
+import Subscribe from "./components/layout/Subscribe";
 import HotelsPage from "./components/dashboard/hotels/HotelsPage";
 import AddHotels from "./components/dashboard/hotels/AddHotels";
 import ContactPage from "./components/contact/ContactPage";
@@ -55,6 +56,7 @@ function App() {
 				            </div>
 			    </Router>
 		    </AuthProvider>
+			    <Subscribe />
 			    <Footer />
 		</Container>
 		

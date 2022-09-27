@@ -23,5 +23,4 @@ export const StyleHeading = styled.div`
     font-family: sans-serif;
 	letter-spacing: 0.15rem;
     font-weight: 700;
-	text-shadow: .1rem .1rem .5rem #FFF;
 `;
