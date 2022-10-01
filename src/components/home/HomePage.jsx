@@ -11,7 +11,7 @@ export default function HomePage() {
 			    <StyleHeading>
 			        <Heading content="Home" />
 			    </StyleHeading>
-				    <StyleHeadingTwo>&#10095; Featured establishments</StyleHeadingTwo>
+				    <StyleHeadingTwo>Featured establishments</StyleHeadingTwo>
 			        <EstablishmentsFeatured />
 		    </ContainerPage>
 		</>
