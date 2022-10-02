@@ -14,7 +14,7 @@ export const ContainerSubscribe = styled.div`
         }
     }
     input[type=text] {
-        max-width: 150px;
+        max-width: 250px;
         padding: 1rem;
         border: none;
         border-radius: 1.5rem 0 0 1.5rem;
