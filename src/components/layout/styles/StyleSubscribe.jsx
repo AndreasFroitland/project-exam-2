@@ -5,7 +5,7 @@ export const ContainerSubscribe = styled.div`
     height: auto;
     background-color: #A2B4B8;
     form {
-        max-width: 600px;
+        max-width: 800px;
         padding: 5rem;
         text-align: center;
         margin: 0 auto;
