@@ -9,6 +9,9 @@ export const ContainerSubscribe = styled.div`
         padding: 5rem;
         text-align: center;
         margin: 0 auto;
+        @media (max-width: 800px) {
+        padding: .5rem;
+        }
     }
     input[type=text] {
         max-width: 150px;
