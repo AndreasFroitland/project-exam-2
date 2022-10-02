@@ -11,13 +11,13 @@ export const ContainerSubscribe = styled.div`
         margin: 0 auto;
     }
     input[type=text] {
-        width: 55%;
+        width: 300px;
         padding: 1rem;
         border: none;
         border-radius: 1.5rem 0 0 1.5rem;
     }
     button {
-        width: 35%;
+        max-width: 75px;
         padding: 1rem;
         border: none;
         border-radius: 0 1.5rem 1.5rem 0;
