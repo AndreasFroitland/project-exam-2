@@ -1,12 +1,52 @@
-# Project exam 2 - Andreas
+# Project Exam 2
 
-## Login details:
+![image](https://i.imgur.com/99S8041.png)
+
+The website is used to book establishments.
+
+## Description
+
+The website is used to book establishments from Holidaze. Users can find information about
+the different establishments and choose what fits their holiday best.
+
+- Booking establishments
+- Viewing establishments
+
+## Built With
+
+- [React.js](https://reactjs.org/)
+
+## Getting Started
+
+### Installing
+
+1. Clone the repo:
+
+```bash
+git clone git@github.com:AndreasFroitland/project-exam-2.git
 ```
-Username: Admin
-Password: .123Admin456.
+
+2. Install the dependencies:
+
+```
+npm i yup
+npm i axios
+npm i react-router-dom
+npm i react-hook-form
 ```
 
-## Live view:
-[Netlify link](https://andreas-froitland-project-exam-2.netlify.app/).
+### Running
 
-![Holidaze preview image](https://i.imgur.com/PRiiojW.png)
+To run the app, run the following commands:
+
+```bash
+npm run start
+```
+
+## Contributing
+
+Make sure to open a pull request so the code can be reviewed before publishing.
+
+## Contact
+
+[My e-mail](andreastfroitland@gmail.com)
